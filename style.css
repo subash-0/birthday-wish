@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    color: white;
+    margin-bottom: 50px;
+  }
+  
+  /* Hidden Surprise Elements */
+  .hidden {
+    display: none;
+  }
+  
+  /* Gift Box */
+  .gift-box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  h2{
+    color: white;
+    z-index: 100 !important;
+    margin-top: 80px;
+  }
+  p{
+    color: white;
+    z-index: 100 !important;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #ff6347;
+    position: absolute;
+    top: 0;
+  }
+  
+  .lid {
+    width: 100px;
+    height: 20px;
+    background-color: #ff4500;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    animation: bounceLid 1s ease infinite;
+  }
+  
+  .ribbon {
+    width: 100px;
+    height: 10px;
+    background-color: yellow;
+    position: absolute;
+    top: 40px;
+  }
+  
+  /* Animation for the Gift Box Lid */
+  @keyframes bounceLid {
+    0% {
+      top: -20px;
+    }
+    50% {
+      top: -30px;
+    }
+    100% {
+      top: -20px;
+    }
+  }
+  
+  /* Cake Styling */
+  .cake {
+    width: 150px;
+    height: 180px;
+    position: relative;
+    margin: 20px auto;
+  }
+  
+  .layer {
+    width: 150px;
+    height: 50px;
+    background-color: #ff69b4;
+    position: relative;
+    border-radius: 10px;
+  }
+  
+  .top-layer {
+    background-color: #ff6347;
+    top: 0;
+  }
+  
+  .middle-layer {
+    background-color: #ff4500;
+    top: 50px;
+  }
+  
+  .bottom-layer {
+    background-color: #ff1493;
+    top: 100px;
+  }
+  
+  /* Candles */
+  .candles {
+    width: 15px;
+    height: 50px;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.8);
+    animation: flicker 0.5s alternate infinite;
+  }
+  
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+      box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.8);
+    }
+    100% {
+      opacity: 0.7;
+      box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.6);
+    }
+  }
+  
+  /* Fireworks */
+  #fireworks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .firework {
+    width: 4px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    animation: explode 2s linear forwards;
+  }
+  
+  @keyframes explode {
+    0% {
+      transform: scaleY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 0;
+    }
+  }
+  
+  /* Starry Sky */
+  #stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .star {
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    animation: twinkle 3s infinite ease-in-out;
+  }
+  
+  @keyframes twinkle {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+  
