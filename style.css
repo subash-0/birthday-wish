@@ -45,6 +45,18 @@
     color: white;
     z-index: 100 !important;
   }
+  h1{
+    filter: drop-shadow(0 0 10px rgb(107, 138, 239));
+    animation: huerotate 5s infinite;
+  }
+    @keyframes huerotate {
+        0% {
+        filter: hue-rotate(0deg);
+        }
+        100% {
+        filter: hue-rotate(360deg);
+        }
+    }
   .box {
     width: 100px;
     height: 100px;
